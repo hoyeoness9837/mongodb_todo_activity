@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form>
-      username:<input id="usernameInput" type="text" />
-      <label for="loginBtn"></label>
-      <input id="loginBtn" type="button" value="submit" /><br />
-      <label for="todoInput"></label>
-      To do:<input id="todoInput" type="text" />
-      <label for="submitBtn"></label>
-      <input id="submitBtn" type="button" value="submit" />
-    </form>
-    <p id="output"></p>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Application</title>
+</head>
+<body>
+  <form>
+    <p>
+      <label for="item">item</label>
+      <input type="text" name="item" id="item">
+    </p>
+    <p>
+      <button id="addItem">Add Item</button>
+    </p>
+  </form>
+  <ul id="items"></ul>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./db.js"></script>
+  <script src="./app.js"></script>
+</body>
 </html>
