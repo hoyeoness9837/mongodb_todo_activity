@@ -1,8 +1,10 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express = require('express');
+const logger = require('morgan');
 const { join } = require('path');
 const app = express();
 
+app.use(logger('dev'));
 app.use(express.static(join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
